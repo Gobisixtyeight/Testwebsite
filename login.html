@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Kinplasod</title>
+  <link rel="stylesheet" href="css/tamplate.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="main-header">
+  <a href="index.html" class="icon">
+    <img src="image/kinplasod.jpg" alt="logoweb" width="60" height="60">
+    <span id="brand">Kinplasod</span>
+  </a>
+
+  <nav class="menu">
+    <a href="index.html"> หน้าหลัก</a>
+    <a href="product.html"></span> สินค้า</a>
+    <a href="contact.html"></span> ติดต่อเรา</a>
+    <a href="login.html" class="mobile-login"><span class="material-icons">login</span> เข้าสู่ระบบ</a> 
+</nav>
+
+<div class="sign">
+    <button id="open-login"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign in</button>
+</div>
+
+  <div class="menu-toggle">
+    <span class="material-icons">menu</span>
+  </div>
+</header>
+<main>
+
+  <!-- toggle -->
+  <div class="form-toggle-container">
+    <div class="form-toggle-tab">
+      <div class="toggle-indicator" id="toggleIndicator"></div>
+      <button id="showLogin" class="toggle-btn active">เข้าสู่ระบบ</button>
+      <button id="showRegister" class="toggle-btn">สมัครสมาชิก</button>
+    </div>
+  </div>
+   <!-- toggle -->
+
+   <!-- login -->
+  <div class="form-card login-form active">
+    <h2>เข้าสู่ระบบ</h2>
+    <div class="formgroup">
+      <label for="username">Username</label><br>
+      <input type="text" name="username" placeholder="Username" required class="inputreg">
+    </div>
+    <div class="formgroup">
+      <label for="password">Password</label><br>
+      <input type="password" name="password" placeholder="Password" required class="inputreg">
+    </div>
+    <button type="submit" class="submitlogin">เข้าสู่ระบบ</button>
+  </div>
+
+  <!-- login -->
+
+  <!-- register -->
+  <div class="form-card register-form" >
+    <h2>สมัครสมาชิก</h2>
+    <div class="formgroup">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" placeholder="name" required class="inputreg">
+    </div>
+    <div class="formgroup">
+      <label for="username">Username</label><br>
+      <input type="text" name="username" placeholder="Username" required class="inputreg">
+    </div>
+    <div class="formgroup">
+      <label for="password">Password</label><br>
+      <input type="password" name="password" placeholder="Password" required class="inputreg">
+    </div>
+    <div class="formgroup">
+      <label for="email">E-mail</label><br>
+      <input type="email" name="email" placeholder="E-mail" required class="inputreg"><br>
+    </div>
+    <div class="formgroup">
+      <label for="phone">Phone</label><br>
+      <input type="phone" name="phone" placeholder="Phone" required class="inputreg"><br>
+    </div>
+    <button type="submit" class="submitreg">สมัครสมาชิก</button>
+  </div>
+   <!-- register -->
+</main>
+
+<footer class="footer">
+  <p class="text-center">Copyright &copy; by Tawan Lerttaksinanon</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

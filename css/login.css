@@ -1,0 +1,128 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-card{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-family: prompt;
+    background-color: rgb(237, 241, 246);
+    width: 360px;
+    box-shadow: 0 4px 6px #252525;
+    border-radius: 10px;
+    padding: 50px;
+    margin-top: 5rem;
+    backdrop-filter: blur(10px);           
+    -webkit-backdrop-filter: blur(10px); 
+
+}
+.form-card.active{
+    display: flex;
+}
+.form-card label{
+    margin-left: 0.5rem;
+    font-family: prompt;
+    font-weight: bold;
+    font-size: 18px;
+}
+.inputreg{
+    background-color: rgb(252, 252, 252);
+    border-radius: 10px;
+    border: gray;
+    box-shadow: 0 4px 6px #9b9b9b;
+    color: black;
+    font-family: prompt;
+    padding: 8px 10px;
+    outline: none;
+    font-size: 16px;
+}
+.submitreg{
+    font-family: prompt;
+    font-size: 16px;
+    border: #252525;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 20px;
+    box-shadow: 0 4px 6px #686868;
+    cursor: pointer;
+    background-color: #1686e1;
+    color: white;
+}
+.submitreg:hover{
+    background-color: #1377c8;
+    color: white;
+}
+.submitlogin{
+    font-family: prompt;
+    font-size: 16px;
+    border: #252525;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 20px;
+    box-shadow: 0 4px 6px #686868;
+    cursor: pointer;
+    background-color: #1686e1;
+    color: white;
+}
+.submitlogin:hover{
+    background-color: #1377c8;
+    color: white;
+}
+.formgroup label[for="note"]{
+    font-family: prompt;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+}
+.form-toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .form-toggle-tab {
+    position: relative;
+    background: #58b9e7;
+    border-radius: 30px;
+    display: flex;
+    width: 300px;
+    padding: 5px;
+  }
+  
+  .toggle-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: prompt;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 0;
+    border-radius: 30px;
+  }
+  
+  .toggle-btn.active {
+    color: rgb(255, 255, 255);
+  }
+  .toggle-indicator {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #1377c8;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: 0;
+  }

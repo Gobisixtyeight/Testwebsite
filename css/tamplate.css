@@ -1,0 +1,198 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: 360px; /* ไม่ให้ย่อจอเล็กเกินไป */
+  font-family: 'Prompt', sans-serif;
+  /*background-color: #fff5ff;*/
+  /*background: linear-gradient(to bottom,#f6f6f6, #e9fbff);*/
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 80px;
+  box-sizing: border-box;
+  box-shadow: 0 6px 8px #e9e9e9;
+}
+/* ปรับ logo ตรงนี้ */
+.icon {
+display: flex;
+align-items: center;
+gap: 8px;
+text-decoration: none;
+color: #1a1a1a;
+}
+
+#brand {
+font-size: 24px;
+font-family: 'Caveat', sans-serif;
+}
+.material-icons{
+font-size: 16px;
+vertical-align: sub;
+}
+/* ปรับ logo ตรงนี้ */
+/* ปรับปุ่ม เมนูตรงนี้ */
+.menu {
+  display: flex;
+  gap: 50px;
+  
+  font-weight: bolder;
+  align-items: center;
+}
+
+.menu a.active{
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: #343434;
+  pointer-events: none;
+  text-decoration-thickness: 2px;
+}
+.menu a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  position: relative;
+}
+.menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2.6px;
+  background-color: #4a4a4a;
+  transform: scaleX(0); 
+  transform-origin: center; 
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; 
+}
+
+.menu a:hover::after{
+  color: #2840c7;
+  transform: scaleX(1); 
+  opacity: 1; 
+}
+/* ปรับปุ่ม เมนูตรงนี้ */
+/* ปรับปุ่ม signin ตรงนี้สีต่างๆ */
+#open-login{
+background: #1686e1;
+color: white;
+padding: 8px 20px;
+border: none;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+cursor: pointer;
+font-family: prompt;
+font-size: 16px;
+text-align: center;
+
+}
+#open-login:hover{
+background: #1377c8;
+}
+/* ปรับปุ่ม signin ตรงนี้สีต่างๆ */
+/* ตรงนี้ปุ่มสามขีด */
+.menu-toggle {
+display: none;
+font-size: 30px;
+cursor: pointer;
+color: #1a1a1a;
+}
+.mobile-login {
+display: none; 
+}
+/* ตรงนี้ปุ่มสามขีด */
+.footer {
+  width: 100%;
+  background: white;
+  color: rgb(0, 0, 0);
+  padding: 10px 0;
+  text-align: center;
+  font-size: 10px;
+  z-index: 1000;
+  
+}
+
+.clear{
+  margin-top: 60px;
+}
+
+/* ตรงนี้ Responsive ตอนย่อจอ*/
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .menu-link {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+  }
+
+  .menu-toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: block;
+    }
+  .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex; /* ให้ยังโชว์โลโก้ */
+    }
+  
+    .sign {
+      display: none; /* ซ่อนปุ่มเข้าสู่ระบบปกติตอนย่อจอ */
+  }
+  
+  .mobile-login {
+      display: block; /* โชว์ปุ่มเข้าสู่ระบบในเมนู toggle */
+  }
+  /* ของ container */
+.container {
+  flex-direction: column; /* เรียงแนวตั้งในมือถือ */
+  text-align: center;
+}
+
+.container2 {
+  flex-direction: column; /* เรียงแนวตั้งในมือถือ */
+  text-align: center;
+}
+
+.left-image img,
+.right-image img {
+  width: 80%;
+  height: auto;
+  margin: 0 auto; /* รูปกลางในมือถือ */
+}
+
+.des1,
+.des2 {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.title1, .title2 {
+  font-size: 28px; /* ย่อหัวข้อเล็กลงหน่อยบนมือถือ */
+}
+
+}
+/*การย่อจอจบตรงนี้ */
